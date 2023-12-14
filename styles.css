@@ -1,0 +1,91 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+    --border-radius: 12.5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    color: var(--dark-blue);
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    width: 350px;
+
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: calc(var(--border-radius) * 1.75);
+    margin-inline: 1.5rem;
+    text-align: center;
+}
+
+.card h1,
+.card p {
+    margin-inline: 1rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+    color: var(--grayish-blue)
+}
+
+.card img {
+    border-radius: var(--border-radius);
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+footer p {
+    color: var(--dark-blue);
+}
+
+footer a,
+footer a:visited,
+footer a:hover,
+footer a:focus {
+    color: var(--dark-blue);
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: none;
+}
+
+@media (min-width: 800px) {
+
+    html {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 400px;
+    }
+
+}
